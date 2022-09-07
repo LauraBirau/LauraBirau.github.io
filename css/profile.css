@@ -9,3 +9,14 @@
   border-collapse: collapse;
   border-style:double;
 }
+img{
+  width:200px;
+  height:240px;
+
+}
+.image{
+  margin-left:auto;
+    margin-right:auto;
+  border: 3px solid;
+  border-collapse: collapse;
+}

@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     width: 200px;
-    hight:auto;
+    height:auto;
     background-color: #f1f1f1;
 }
 
@@ -91,4 +91,31 @@ h3 {
 .active {
     background-color: rgba(105, 76, 46, 0.8);
 
+}
+h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    font-size: 18px;
+    color: #201611;
+    text-shadow: 1px 0px 0 #866120;
+    margin-left:100px;
+}
+details{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    font-size: 15px;
+    color: #201611;
+    background-color:rgb(231, 205, 147,0.5);
+    border-bottom: 1px solid rgba(245, 215, 171, 0.8);
+    margin-left:100px;
+    margin-right:100px;
+}
+div{
+    display:block;
+    align:center;
+    margin-left:200px;
+    margin-right:200px;
+    margin-bottom:0;
+    background-color:#f5e5df;
+    border-radius: 200px;
 }
