@@ -1,0 +1,37 @@
+
+body{
+    background-image:url("bg.jpg");
+}
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align:center;
+    font-size:50px;
+    color:#543020;
+    text-shadow: -4px -2px 0 #c7ac7f;
+}
+h3{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align:center;
+    font-size:25px; 
+    color:#683a25;
+    text-shadow: 3px 2px 0 #c7ac7f;
+}
+.jojo{
+    display: block;
+    background-color:#c4a484;
+    font-size:17px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+box-shadow:6px 7px 0 #88583a;}
+.dodo{
+    display: block;
+    color:#c7ac7f;
+    font-size:13px;
+    font-weight:bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#683a25;
+    box-shadow:6px 7px 0 #734a32;
+}
+.logo{
+    width:200px;
+    height:50px;
+}

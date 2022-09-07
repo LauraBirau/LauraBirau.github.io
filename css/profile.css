@@ -1,0 +1,11 @@
+.info{
+    background-color:#c7ac7f;
+    width:80%;
+    height:150px;
+    font-family:serif;
+    margin-left:auto;
+    margin-right:auto;
+  border: 3px solid;
+  border-collapse: collapse;
+  border-style:double;
+}
