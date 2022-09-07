@@ -1,71 +1,94 @@
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        position: fixed;
-        left: 10px;
-        top:0px;
-        width: 100%;
-      }
-      li {
-        float: left;
-        border-right: 1px solid #bbb;
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(209, 137, 137);
 }
-      li a {
-        display: block;
-        padding: 10px 10px;
-        background-color: #c22222;
-        color:#683a25;
-        text-decoration: underline;
-      }
-      li a:hover {
-        background-color: #111;
-      }
-tr,th{
+
+.importantlinkss {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    hight:auto;
+    background-color: #f1f1f1;
+}
+
+.list1 {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(119, 70, 70);
+    color: white;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+tr,
+th {
     border-color: #89afa1;
     border: 1px solid;
 }
-body{
-    background-image:url("bg.jpg");
+
+body {
+    background-image: url("bg.jpg");
 }
-h1{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align:center;
-    font-size:50px;
-    color:#543020;
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #543020;
     text-shadow: -4px -2px 0 #c7ac7f;
 }
-h3{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align:center;
-    font-size:25px; 
-    color:#683a25;
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #683a25;
     text-shadow: 3px 2px 0 #c7ac7f;
 }
-.jojo{
+
+.jojo {
     display: block;
-    background-color:#c4a484;
-    font-size:17px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-box-shadow:6px 7px 0 #88583a;}
-.dodo{
+    background-color: #c4a484;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 6px 7px 0 #88583a;
+}
+
+.dodo {
     display: block;
-    color:#c7ac7f;
-    font-size:13px;
-    font-weight:bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color:#683a25;
-    box-shadow:6px 7px 0 #734a32;
+    color: #c7ac7f;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #683a25;
+    box-shadow: 6px 7px 0 #734a32;
 }
-.logo{
-    width:200px;
-    height:50px;
-   margin-right:0px;
-   margin-top:0px;
-   float:right;
+
+.logo {
+    width: 200px;
+    height: 50px;
+    margin-right: 0px;
+    margin-top: 0px;
+    float: right;
 }
-.active{
-    background-color:rgba(105, 76, 46, 0.8);
+
+.active {
+    background-color: rgba(105, 76, 46, 0.8);
 
 }
