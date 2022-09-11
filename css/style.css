@@ -101,6 +101,7 @@ h3 {
     background-color: rgb(241, 222, 222,0.6);
 
 }
+
 h4{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
@@ -138,4 +139,15 @@ div{
   border: 3px solid;
   border-collapse: collapse;
   border-style:double;
+}
+
+.imgmain{
+height:300px;
+weight:200px;
+}
+.editmain{
+
+    background-color:#BBACC1;
+    font-size:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
