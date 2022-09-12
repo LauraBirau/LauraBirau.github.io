@@ -38,9 +38,12 @@ li a:hover {
 li:last-child {
     border-right: none;
 }
-
+.editmain thead{
+    font-size:25px;
+    background-color:#588ab0;
+}
 tr,
-th {
+th{
     border-color: #BBACC1;
     border: 1px solid;
 }
@@ -57,7 +60,7 @@ h1 {
     text-align: center;
     font-size: 50px;
     color: #12263A;
-    text-shadow: -4px -2px 0 #58A4B0;
+    text-shadow: -4px -2px 0 #197aa5;
 }
 aside{
     grid-area: aside;
@@ -68,7 +71,7 @@ h3 {
     text-align: center;
     font-size: 25px;
     color: #12263A;
-    text-shadow: -4px -2px 0 #58A4B0;
+    text-shadow: -4px -2px 0 #197aa5;
 }
 
 .jojo {
@@ -147,7 +150,7 @@ weight:200px;
 }
 .editmain{
 
-    background-color:#BBACC1;
+    background-color:#cee2f092;
     font-size:20px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
