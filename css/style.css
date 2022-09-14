@@ -171,6 +171,41 @@ details {
     border-collapse: collapse;
     border-style: double;
 }
+.progress-bar {
+    position: relative;
+    width: 98%;
+    height: 40px;
+    background: gray;
+  }
+  
+  .bar {
+    position:absolute;
+    top: 0;
+    left: 0px;
+    right:auto;
+    width: 25%;
+    height: 100%;
+    background: rgba(20, 74, 145, 0.568);
+  }
+  
+  .marker-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .marker-list .marker {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(224, 198, 198);
+  }
 #file{
 width:100%;
 background-color:#9cbcdb;
@@ -263,4 +298,15 @@ footer p{
     margin-top: 20px;
     margin-right: 10px;
     font-size:20px;
+}
+.info{
+    background-color:#78acd3;
+    width:80%;
+    height:150px;
+    font-family:serif;
+    margin-left:auto;
+    margin-right:auto;
+  border: 3px solid;
+  border-collapse: collapse;
+  border-style:double;
 }
