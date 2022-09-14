@@ -13,7 +13,13 @@
     overflow: hidden;
     background-color: #78acd3;
 }
-
+footer{
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #78abd3b1;
+}
 .list1 {
     float: left;
     border-right: 1px solid #F1DEDE;
@@ -165,7 +171,16 @@ details {
     border-collapse: collapse;
     border-style: double;
 }
-
+#file{
+width:100%;
+background-color:#9cbcdb;
+}
+.passed{
+background-color:#79e3237d;
+}
+.failed{
+background-color:rgba(255, 0, 0, 0.455);
+}
 .imgmain {
     height: 300px;
     weight: 200px;
@@ -194,8 +209,8 @@ details {
   
   .imgalign img {
     width: 100%;
-    max-width: 400px;
-    height: 250px;
+    max-width: 240px;
+    height: 230px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -231,6 +246,21 @@ details {
 
 video {
     display: block;
-    margin: 0 auto;
     text-align: center;
+}
+footer img{
+    width:40px;
+    height: 40px;
+    display: block;
+    float:right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+footer p{
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size:20px;
 }
