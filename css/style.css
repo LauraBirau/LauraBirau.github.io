@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 .navigation {
   list-style-type: none;
   margin: 0;
@@ -11,27 +12,25 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #f5efe6;
+  background-color: #cec7be;
 }
 footer {
   list-style-type: none;
   margin-top: 20px;
   padding: 0;
   overflow: hidden;
-  background-color: #78abd3b1;
+  background-color: #f5efe6d2;
 }
 .list1 {
   float: left;
   border-right: 3px solid #f5efe6;
   font-size: 29px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .list2 {
   float: right;
   border-left: 1px solid #f1dede;
   font-size: 20px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .navigation li a {
@@ -61,12 +60,6 @@ footer {
 li:last-child {
   border-right: none;
 }
-
-/* .editmain thead {
-    font-size: 25px;
-    background-color: #588ab0;
-} */
-
 tr,
 th,
 td {
@@ -78,9 +71,12 @@ td {
 body {
   background-image: url("brasov.webp");
   backdrop-filter: blur(3px);
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   margin: 0;
   padding: 10px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -89,7 +85,6 @@ header {
 }
 
 h1 {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   text-align: center;
   font-size: 50px;
   color: #212830;
@@ -103,7 +98,6 @@ aside {
 }
 
 h3 {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   text-align: center;
   font-size: 40px;
   color: #212830;
@@ -125,19 +119,20 @@ h3 {
   grid-auto-flow: dense;
 }
 .my-characteristics {
-  display: block;
-  width: 100%;
+  width: 90%;
   color: #11042e;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   text-align: center;
   background-color: #c8dff773;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 30px;
 }
-
+.table-my-characteristics{
+  table-layout: fixed;
+  width: 100%;
+}
 .logo {
   width: 200px;
   height: 50px;
@@ -151,40 +146,35 @@ h3 {
 }
 
 h4 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: left;
-  font-size: 18px;
+  font-size: 28px;
   color: #201611;
   text-shadow: 1px 0px 0 #866120;
   margin-left: 100px;
 }
 
 details {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: left;
-  font-size: 15px;
+  font-size: 25px;
   color: #201611;
-  background-color: rgb(231, 205, 147, 0.5);
-  border-bottom: 1px solid rgba(245, 215, 171, 0.8);
+  border-bottom: 1px solid rgba(65, 43, 12, 0.8);
   margin-left: 100px;
   margin-right: 100px;
 }
-
 .faq {
   display: block;
   align-items: center;
   margin-left: 200px;
   margin-right: 200px;
   margin-bottom: 0;
-  background-color: #f5e5df;
+  background-color: #cee2f083;
   border-radius: 200px;
 }
 
 .dashboard {
-  background-color: #78acd3;
+  background-color: #7895b2a2;
   width: 80%;
   height: 150px;
-  font-family: serif;
   margin-left: auto;
   margin-right: auto;
   border: 3px solid;
@@ -195,7 +185,7 @@ details {
   position: relative;
   width: 98%;
   height: 40px;
-  background: gray;
+  background: #F5EFE6;
 }
 
 .bar {
@@ -203,9 +193,9 @@ details {
   top: 0;
   left: 0px;
   right: auto;
-  width: 25%;
+  width: 15%;
   height: 100%;
-  background: rgba(20, 74, 145, 0.568);
+  background: #aebdcab9;
 }
 
 .marker-list {
@@ -242,12 +232,14 @@ details {
   width: 200px;
   display: inline-block;
 }
-
+main{
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
 .editmain {
-  background-color: #cee2f083;
+  background-color: #cee2f088;
   block-size: fit-content;
   font-size: 26px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   padding-left: 70px;
   padding-right: 70px;
   margin-left: 60px;
@@ -259,19 +251,20 @@ details {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 17px;
   max-width: 2000px;
   margin: 0pc 0px;
   padding: 0px 10px;
+  width: 100%;
+  gap:17px;
 }
 
 .imgalign img {
   width: 100%;
   max-width: 260px;
   height: 230px;
-  object-fit: cover;
+  object-fit:fill;
   border-radius: 10px;
 }
 
@@ -325,15 +318,13 @@ footer p {
   font-size: 20px;
 }
 .info {
-  background-color: #78acd3;
+  background-color: #AEBDCA;
   width: 80%;
   height: 150px;
-  font-family: serif;
   margin-left: auto;
   margin-right: auto;
   border: 3px double;
   border-collapse: collapse;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .info td,
@@ -347,8 +338,3 @@ footer p {
   object-fit: fill;
 }
 
-#faq-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
