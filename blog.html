@@ -65,17 +65,34 @@
                 border-radius: 200px;
             }
         </style>
+            <script>
+        /* Function call */
+        getSwapiData();
+
+        /**
+         * Function to get the data from the Swapi API and deliver it to the DOM
+         */
+        function getSwapiData() {
+            fetch("https://dog.ceo/api/breeds/image/random")
+                .then((response) => response.json())
+                .then((data) => {
+                    const img = document.createElement("img");
+                    img.src = data.message;
+                    document.getElementById('add_photo').append(img);
+                })
+                .catch((err) => {
+                    console.log("The dog image is not there. Ups!", err);
+                });
+        }
+    </script>
+
         <div class="row">
-            <div class="column">
-                <img src="images/me.jpeg">
+                <div class="column" id="add_photo">
             </div>
             <div class="column">
                 <article>
                     <h5>Study choice</h5>
-                    <p>Before deciding upon the future of my career, I have read the brochure/site very carefully and
-                        also I
-                        have attended to a lot of information sessions about life at HZ and especially the ICT programme
-                        ...<a href="posts/post1.html">read more</a></p>
+                    <p>Before deciding upon the future of my career, I have read the brochure/site very carefully and also I have attended to a lot of information sessions about life at HZ and especially the ICT programme...<a href="posts/post1.html">read more</a></p>
                 </article>
                 <article>
                     <h5>Personal SWOT analysis</h5>
