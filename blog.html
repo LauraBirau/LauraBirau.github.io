@@ -72,18 +72,45 @@
         /**
          * Function to get the data from the Swapi API and deliver it to the DOM
          */
-        function getSwapiData() {
-            fetch("https://dog.ceo/api/breeds/image/random")
-                .then((response) => response.json())
-                .then((data) => {
-                    const img = document.createElement("img");
-                    img.src = data.message;
-                    document.getElementById('add_photo').append(img);
-                })
-                .catch((err) => {
-                    console.log("The dog image is not there. Ups!", err);
-                });
-        }
+         function getSwapiData() {
+            //create image and h3 elements to be appended in the end
+            const img = document.createElement("img");
+      const h3 = document.createElement("h3");
+      //send a GET request to the API endpoint
+      //in this case, the Dog API
+      //return a promise
+  fetch("https://dog.ceo/api/breeds/list/all")
+  //retuns the respons from the API and calls the json() method on it
+  //the json() method returns a promise that resolved the given JSON data
+    .then((response) => response.json())
+    //received the JSON data
+    //an array in this case
+    .then((data) => {
+        //trasforms the JSON into an array
+      let array = Object.keys(data.message);
+      //gets a random breed name from the array
+      const randomBreed = array[Math.floor(Math.random() * array.length)];
+      //give the h3 element the name of the breed
+      h3.innerText = randomBreed.charAt(0).toUpperCase() + randomBreed.slice(1);
+      //the second GET request to the API endpoint
+      return fetch(`https://dog.ceo/api/breed/${randomBreed}/images/random`);
+    })
+    //returns another response in form of a json() method
+    .then((response) => response.json())
+    //received the JSON data
+    //an image in this case
+    .then((data) => {
+        //give the image element the image fetched
+      img.src = data.message;
+      //append the element in the desired place
+      document.getElementById('add_photo').append(img);
+      document.getElementById('add_photo').append(h3); // Corrected line
+    })
+    //catch any errors in the network request
+    .catch((err) => {
+      console.log("The dog image is not there. Ups!", err);
+    });
+}
     </script>
 
         <div class="row">
