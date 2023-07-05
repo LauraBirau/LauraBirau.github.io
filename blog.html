@@ -37,6 +37,7 @@
                 padding: 10px;
                 margin-bottom: 20px;
             }
+
             h5 {
                 font-size: 28px;
             }
@@ -65,61 +66,67 @@
                 border-radius: 200px;
             }
         </style>
-            <script>
-        /* Function call */
-        getSwapiData();
+        <script>
+            /* Function call */
+            getDogImages();
+            /**
+             * Function to get the data from the API and deliver it to the DOM
+             */
+            function getDogImages() {
+                //create image and h3 elements to be appended in the end
+                const img = document.createElement("img");
+                const h3 = document.createElement("h3");
+                //send a GET request to the API endpoint
+                //in this case, the Dog API
+                //return a promise
+                fetch(`https://dog.ceo/api/breeds/list/all`)
+                    //retuns the respons from the API and calls the json() method on it
+                    //the json() method returns a promise that resolved the given JSON data
+                    .then((response) => response.json())
+                    //received the JSON data
+                    //an array in this case
+                    .then((data) => {
+                        //trasforms the JSON into an array
+                        let array = Object.keys(data.message);
+                        //gets a random breed name from the array
+                        const randomBreed = array[Math.floor(Math.random() * array.length)];
+                        //give the h3 element the name of the breed
+                        h3.innerText = randomBreed.charAt(0).toUpperCase() + randomBreed.slice(1);
+                        //the second GET request to the API endpoint
+                        return fetch(`https://dog.ceo/api/breed/${randomBreed}/images/random`);
+                    })
+                    //returns another response in form of a json() method
+                    .then((response) => response.json())
+                    //received the JSON data
+                    //an image in this case
+                    .then((data) => {
+                        //give the image element the image fetched
+                        img.src = data.message;
+                        //append elements in the desired place
+                        dogsColumn(img, h3);
+                    })
+                    //catch any errors in the network request
+                    .catch((err) => {
+                        console.log("The dog image is not there. Ups!", err);
+                    });
+            }
+            function dogsColumn(img, h3) {
+                const column = document.createElement('div');
+                column.className = 'column';
+                column.append(img);
+                column.append(h3);
+                document.querySelector('.row').append(column);
 
-        /**
-         * Function to get the data from the Swapi API and deliver it to the DOM
-         */
-         function getSwapiData() {
-            //create image and h3 elements to be appended in the end
-            const img = document.createElement("img");
-      const h3 = document.createElement("h3");
-      //send a GET request to the API endpoint
-      //in this case, the Dog API
-      //return a promise
-  fetch("https://dog.ceo/api/breeds/list/all")
-  //retuns the respons from the API and calls the json() method on it
-  //the json() method returns a promise that resolved the given JSON data
-    .then((response) => response.json())
-    //received the JSON data
-    //an array in this case
-    .then((data) => {
-        //trasforms the JSON into an array
-      let array = Object.keys(data.message);
-      //gets a random breed name from the array
-      const randomBreed = array[Math.floor(Math.random() * array.length)];
-      //give the h3 element the name of the breed
-      h3.innerText = randomBreed.charAt(0).toUpperCase() + randomBreed.slice(1);
-      //the second GET request to the API endpoint
-      return fetch(`https://dog.ceo/api/breed/${randomBreed}/images/random`);
-    })
-    //returns another response in form of a json() method
-    .then((response) => response.json())
-    //received the JSON data
-    //an image in this case
-    .then((data) => {
-        //give the image element the image fetched
-      img.src = data.message;
-      //append the element in the desired place
-      document.getElementById('add_photo').append(img);
-      document.getElementById('add_photo').append(h3); // Corrected line
-    })
-    //catch any errors in the network request
-    .catch((err) => {
-      console.log("The dog image is not there. Ups!", err);
-    });
-}
-    </script>
+            }
+        </script>
 
         <div class="row">
-                <div class="column" id="add_photo">
-            </div>
             <div class="column">
                 <article>
                     <h5>Study choice</h5>
-                    <p>Before deciding upon the future of my career, I have read the brochure/site very carefully and also I have attended to a lot of information sessions about life at HZ and especially the ICT programme...<a href="posts/post1.html">read more</a></p>
+                    <p>Before deciding upon the future of my career, I have read the brochure/site very carefully and
+                        also I have attended to a lot of information sessions about life at HZ and especially the ICT
+                        programme...<a href="posts/post1.html">read more</a></p>
                 </article>
                 <article>
                     <h5>Personal SWOT analysis</h5>
@@ -150,8 +157,10 @@
     <footer>
         <a target="_blank" href="https://www.instagram.com/laura_birau/"><img src="images/instagram.png"></a>
         <a target="_blank" href="https://github.com/settings/profile"><img src="images/github.png"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/elena-laura-birau-573932209/"><img src="images/linkedin.png"></a> <p>Contact me:</p>
-            </footer>
+        <a target="_blank" href="https://www.linkedin.com/in/elena-laura-birau-573932209/"><img
+                src="images/linkedin.png"></a>
+        <p>Contact me:</p>
+    </footer>
 </body>
 
 </html>
